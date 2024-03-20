@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+  font-family: "Inter", sans-serif !important;
+  font-optical-sizing: auto !important;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.cs-message-input__content-editor-wrapper, .cs-message-input__content-editor {
+  background-color: #FDF2F2   !important;
+  /* color: #EA4335 !important; */
+  border: 1px solid #EA4335;
+  font-weight: 500;
+}
+
+.cs-button.cs-button--attachment{
+  visibility: hidden !important;
+  margin-right: -25px !important;
+}
+
+.cs-button--send{
+  color: #EA4335 !important;
+}
+
+.cs-message__content{
+  background-color: #EFB6AC   !important;
+  box-shadow: 2px 4px 6px -3px black !important;
+  font-weight: 500;
+}
+
+.cs-message--outgoing .cs-message__content{
+  background-color: #EA4335 !important;
+  font-weight: 500;
+  box-shadow: -2px 4px 6px -3px black !important;
+  border-radius: .7em 0 0.7em 0.7em !important;
+}
+
+.cs-message-list{
+
+  background: linear-gradient(1800deg, rgba(255, 255, 255, 0.5), rgb(0 0 0 / 50%)), url(/src/assets/Banner.svg) -100px 0px;
+  padding-top: 20px;
+  border-radius: .7em 0.7em 0 0 !important;
+  
+}
+
+.cs-main-container{
+  border-radius: .7em 0.7em 0 0 !important;
+}
+
+.cs-message--outgoing .cs-message__avatar{
+  display: none !important;
+}
+
+.cs-message-list .cs-typing-indicator{
+  right: 0px !important;
+}
+
+.cs-typing-indicator__text{
+  color: #EA4335 !important;
+}
+
+.cs-message-list__scroll-wrapper>.cs-message, .cs-message-list__scroll-wrapper>.cs-message-group{
+  padding: 5px 0px !important;
+}
