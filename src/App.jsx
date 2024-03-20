@@ -37,7 +37,6 @@ function App() {
   };
 
   async function processMessageToChatGPT(chatMessages) {
-    setTimeout(async() => {
       await fetch(`https://dummyjson.com/products/${Math.floor(Math.random() * 10) + 1}`)
         .then((res) => res.json())
         .then((json) => {
@@ -50,7 +49,6 @@ function App() {
           ]);
           setIsTyping(false);
         });
-    }, 20000);
   }
 
   return (
