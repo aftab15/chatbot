@@ -9,6 +9,9 @@ import {
   MessageInput,
   TypingIndicator,
   Avatar,
+  ConversationHeader,
+  InfoButton,
+  MessageSeparator,
 } from "@chatscope/chat-ui-kit-react";
 import Logo from "./assets/roundSmarte.svg";
 import MessageCustomContent from "./MessageCustomContent";
@@ -27,21 +30,21 @@ function App() {
   ]);
   const [isTyping, setIsTyping] = useState(false);
   const [selectedVersion, setSelectedVersion] = useState({
-    label:"v1",
-    value:"https://dummyjson.com/products/"
+    label: "v1",
+    value: "https://dummyjson.com/products/",
   });
 
   const options = [
     {
-    label:"v1",
-    value:"https://dummyjson.com/products/"
-  },
+      label: "v1",
+      value: "https://dummyjson.com/products/",
+    },
     {
-    label:"v2",
-    value:"https://dummyjson.com/products/"
-  }
-]
-  
+      label: "v2",
+      value: "https://dummyjson.com/products/",
+    },
+  ];
+
   const handleSend = async (message) => {
     const newMessage = {
       message,
@@ -61,9 +64,7 @@ function App() {
     };
     var formData = new FormData();
     formData.append("data", JSON.stringify(data));
-    await fetch(
-      `${selectedVersion.value}${Math.floor(Math.random() * 10) + 1}`
-    )
+    await fetch(`${selectedVersion.value}${Math.floor(Math.random() * 10) + 1}`)
       .then((res) => res.json())
       .then((json) => {
         console.log(json);
@@ -73,47 +74,47 @@ function App() {
             message: json.title,
             responseObject: [
               {
-                "Full_Name": "yesu hosmani",
-                "Company_Name": "little flower of jesus high school",
-                "Job_Title": "Student",
-                "Contact_Location": "None",
-                "Job_Started_On": "None",
-                "Level": "Other",
-                "Function": "Education / Teaching",
-                "Contact_LinkedinUrl":
+                Full_Name: "yesu hosmani",
+                Company_Name: "little flower of jesus high school",
+                Job_Title: "Student",
+                Contact_Location: "None",
+                Job_Started_On: "None",
+                Level: "Other",
+                Function: "Education / Teaching",
+                Contact_LinkedinUrl:
                   "https://www.linkedin.com/in/yesu-hosmani-1b679b183",
               },
               {
-                "Full_Name": "yesu hosmani",
-                "Company_Name": "little flower of jesus high school",
-                "Job_Title": "Student",
-                "Contact_Location": "None",
+                Full_Name: "yesu hosmani",
+                Company_Name: "little flower of jesus high school",
+                Job_Title: "Student",
+                Contact_Location: "None",
                 "Job Started_On": "None",
-                "Level": "Other",
-                "Function": "Education / Teaching",
-                "Contact_LinkedinUrl":
+                Level: "Other",
+                Function: "Education / Teaching",
+                Contact_LinkedinUrl:
                   "https://www.linkedin.com/in/yesu-hosmani-1b679b183",
               },
               {
-                "Full_Name": "yesu hosmani",
-                "Company_Name": "little flower of jesus high school",
-                "Job_Title": "Student",
-                "Contact_Location": "None",
+                Full_Name: "yesu hosmani",
+                Company_Name: "little flower of jesus high school",
+                Job_Title: "Student",
+                Contact_Location: "None",
                 "Job Started_On": "None",
-                "Level": "Other",
-                "Function": "Education / Teaching",
-                "Contact_LinkedinUrl":
+                Level: "Other",
+                Function: "Education / Teaching",
+                Contact_LinkedinUrl:
                   "https://www.linkedin.com/in/yesu-hosmani-1b679b183",
               },
               {
-                "Full_Name": "yesu hosmani",
-                "Company_Name": "little flower of jesus high school",
-                "Job_Title": "Student",
-                "Contact_Location": "None",
+                Full_Name: "yesu hosmani",
+                Company_Name: "little flower of jesus high school",
+                Job_Title: "Student",
+                Contact_Location: "None",
                 "Job Started_On": "None",
-                "Level": "Other",
-                "Function": "Education / Teaching",
-                "Contact_LinkedinUrl":
+                Level: "Other",
+                Function: "Education / Teaching",
+                Contact_LinkedinUrl:
                   "https://www.linkedin.com/in/yesu-hosmani-1b679b183",
               },
             ],
@@ -128,7 +129,45 @@ function App() {
   return (
     <div className="App">
       <div style={{ position: "relative", height: "90vh", width: "700px" }}>
-        <MainContainer>
+        <MainContainer className="flex flex-col">
+          <ConversationHeader className=" absolute w-full !z-10">
+            <Avatar src={Logo} name="Smarte AI" />
+            <ConversationHeader.Content
+              userName="Smarte AI"
+              info="We typically reply in a few minutes"
+            />
+            <ConversationHeader.Actions>
+              <InfoButton />
+            </ConversationHeader.Actions>
+          </ConversationHeader>
+          <ChatContainer className="pt-16">
+            <MessageList
+              scrollBehavior="smooth"
+              typingIndicator={
+                isTyping ? (
+                  <TypingIndicator content="Smarte AI is typing" />
+                ) : null
+              }
+            >
+              <MessageSeparator content={new Date().toDateString()} />
+              {messages.map((message, i) => {
+                return (
+                  <Message key={i} model={message} position="single">
+                    <Avatar src={Logo} />
+                    <Message.CustomContent>
+                      <MessageCustomContent id={i} message={message} />
+                    </Message.CustomContent>
+                  </Message>
+                );
+              })}
+            </MessageList>
+            <MessageInput
+              placeholder="Type message here"
+              onSend={(e) => {
+                handleSend(e);
+              }}
+            ></MessageInput>
+          </ChatContainer>
           <Select
             searchable={false}
             clearable={false}
@@ -153,33 +192,6 @@ function App() {
               },
             ]}
           />
-          <ChatContainer>
-            <MessageList
-              scrollBehavior="smooth"
-              typingIndicator={
-                isTyping ? (
-                  <TypingIndicator content="Smarte AI is typing" />
-                ) : null
-              }
-            >
-              {messages.map((message, i) => {
-                return (
-                  <Message key={i} model={message} position="single">
-                    <Avatar src={Logo} />
-                    <Message.CustomContent>
-                      <MessageCustomContent id={i} message={message} />
-                    </Message.CustomContent>
-                  </Message>
-                );
-              })}
-            </MessageList>
-            <MessageInput
-              placeholder="Type message here"
-              onSend={(e) => {
-                handleSend(e);
-              }}
-            />
-          </ChatContainer>
         </MainContainer>
       </div>
     </div>
