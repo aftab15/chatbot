@@ -1,11 +1,5 @@
+import { Card } from "flowbite-react";
 import * as React from "react";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
 
 const MessageCustomContent = ({ id, message }) => {
   return (
@@ -14,57 +8,92 @@ const MessageCustomContent = ({ id, message }) => {
         message.direction !== "incoming") && <div>{message.message}</div>}
 
       {message.direction == "incoming" && id > 0 && message.status == "200" ? (
-        <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 300 }} aria-label="simple table">
-            <TableHead>
-              <TableRow>
-                <TableCell>Full Name</TableCell>
-                <TableCell align="right">Company Name</TableCell>
-                <TableCell align="right">Job Title</TableCell>
-                <TableCell align="right">Job Started On</TableCell>
-                <TableCell align="right">Level</TableCell>
-                <TableCell align="right">Function</TableCell>
-                <TableCell align="right">Contact Linkedin Url</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
+        <Card className="max-w-sm max-h-[300px] overflow-y-auto">
+          <div className="flow-root">
+            <ul className="divide-y divide-gray-200">
               {message.responseObject.map((item, index) => {
                 return (
-                  <TableRow
-                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                    key={index}
-                  >
-                    <TableCell component="th" scope="row">
-                      {item["Full Name"] || "---"}
-                    </TableCell>
-                    <TableCell component="th" scope="row">
-                      {item["Company Name"] || "---"}
-                    </TableCell>
-                    <TableCell component="th" scope="row">
-                      {item["Job Title"] || "---"}
-                    </TableCell>
-                    <TableCell component="th" scope="row">
-                      {item["Job Started On"] || "---"}
-                    </TableCell>
-                    <TableCell component="th" scope="row">
-                      {item["Level"] || "---"}
-                    </TableCell>
-                    <TableCell component="th" scope="row">
-                      {item["Function"] || "---"}
-                    </TableCell>
-                    <TableCell component="th" scope="row">
-                      {item["Contact Linkedin Url"] || "---"}
-                    </TableCell>
-                  </TableRow>
+                  <li className="py-3 sm:py-3" key={index}>
+                    <div className="flex flex-col gap-2">
+                      <div className="min-w-0 flex-1 justify-start">
+                        <p className="truncate text-sm font-medium text-gray-900 text-left">
+                          Full Name
+                        </p>
+                        <p className="truncate text-sm text-gray-500 text-left">
+                          {item.Full_Name || "Not available"}
+                        </p>
+                      </div>
+                      <div className="min-w-0 flex-1 justify-start">
+                        <p className="truncate text-sm font-medium text-gray-900 text-left">
+                          Company Name
+                        </p>
+                        <p className="truncate text-sm text-gray-500 text-left">
+                          {item.Company_Name || "Not available"}
+                        </p>
+                      </div>
+                      <div className="min-w-0 flex-1 justify-start">
+                        <p className="truncate text-sm font-medium text-gray-900 text-left">
+                          Job Title
+                        </p>
+                        <p className="truncate text-sm text-gray-500 text-left">
+                          {item.Job_Title || "Not available"}
+                        </p>
+                      </div>
+                      <div className="min-w-0 flex-1 justify-start">
+                        <p className="truncate text-sm font-medium text-gray-900 text-left">
+                          Contact Location
+                        </p>
+                        <p className="truncate text-sm text-gray-500 text-left">
+                          {item.Contact_Location || "Not available"}
+                        </p>
+                      </div>
+                      <div className="min-w-0 flex-1 justify-start">
+                        <p className="truncate text-sm font-medium text-gray-900 text-left">
+                          Job Started On
+                        </p>
+                        <p className="truncate text-sm text-gray-500 text-left">
+                          {item.Job_Started_On || "Not available"}
+                        </p>
+                      </div>
+                      <div className="min-w-0 flex-1 justify-start">
+                        <p className="truncate text-sm font-medium text-gray-900 text-left">
+                          Level
+                        </p>
+                        <p className="truncate text-sm text-gray-500 text-left">
+                          {item.Level || "Not available"}
+                        </p>
+                      </div>
+                      <div className="min-w-0 flex-1 justify-start">
+                        <p className="truncate text-sm font-medium text-gray-900 text-left">
+                          Function
+                        </p>
+                        <p className="truncate text-sm text-gray-500 text-left">
+                          {item.Function || "Not available"}
+                        </p>
+                      </div>
+                      <div className="min-w-0 flex-1 justify-start">
+                        <p className="truncate text-sm font-medium text-gray-900 text-left">
+                          Contact Linkedin Url
+                        </p>
+                        <a
+                          href={item.Contact_LinkedinUrl}
+                          className="text-sm font-medium text-cyan-600 hover:underline text-left flex"
+                          target="_blank"
+                        >
+                        {item.Contact_LinkedinUrl || "Not available"}
+                        </a>
+                      </div>
+                    </div>
+                  </li>
                 );
               })}
-            </TableBody>
-          </Table>
-        </TableContainer>
+            </ul>
+          </div>
+        </Card>
       ) : message.direction == "incoming" &&
         id > 0 &&
         message.status != "200" ? (
-        <div>error occured!!</div>
+        <div>There are no contacts try modifying your prompt</div>
       ) : null}
     </>
   );

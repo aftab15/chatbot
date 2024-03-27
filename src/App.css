@@ -62,7 +62,7 @@
 
 .cs-button.cs-button--attachment{
   visibility: hidden !important;
-  /* margin-right: -25px !important; */
+  margin-right: 15px !important;
 }
 
 .cs-button--send{
@@ -78,7 +78,7 @@
 }
 
 .cs-message--outgoing .cs-message__content{
-  background-color: #EA4335 !important;
+  background-color: #eb614b !important;
   font-weight: 500;
   box-shadow: -2px 4px 6px -3px black !important;
   border-radius: .7em 0 0.7em 0.7em !important;
@@ -86,7 +86,7 @@
 
 .cs-message-list{
 
-  background: linear-gradient(1800deg, rgba(255, 255, 255, 0.5), rgb(0 0 0 / 50%)), url(/src/assets/Banner.svg) -100px 0px;
+  /* background:  url(/src/assets/Banner.svg) -100px 0px; */
   padding-top: 20px;
   border-radius: .7em 0.7em 0 0 !important;
   
@@ -116,11 +116,12 @@
   position: absolute !important;
   z-index: 2;
   line-height: 35px;
-  width: 42px !important;
+  width: 50px !important;
   color: black;
   bottom: 5px;
   background: #FDF2F2;
   border: 1px solid #EA4335 !important;
+  left: 5px;
   border-radius: 10px !important;
 }
 
@@ -131,4 +132,20 @@
 
 .react-dropdown-select-input {
   display: none;
+}
+ .react-dropdown-select-dropdown{
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+ }
+
+.css-z2hyoe-ItemComponent.react-dropdown-select-item-selected {
+  background-color: #eb614b !important;
+}
+
+.react-dropdown-select[aria-expanded="true"] .react-dropdown-select-dropdown-handle{
+  transform: rotate(180deg) !important;
+}
+
+.react-dropdown-select[aria-expanded="false"] .react-dropdown-select-dropdown-handle{
+  transform: rotate(0deg) !important;
 }
