@@ -43,7 +43,6 @@ function App() {
 ]
   
   const handleSend = async (message) => {
-    console.log('e',message)
     const newMessage = {
       message,
       direction: "outgoing",
@@ -125,7 +124,6 @@ function App() {
             dropdownPosition="auto"
             options={options}
             onChange={(item)=>{
-              console.log("vall : ",item)
               setSelectedVersion(item[0])
               setMessages([
                 {
