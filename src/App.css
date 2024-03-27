@@ -115,7 +115,20 @@
 .chat-dropdown{
   position: absolute !important;
   z-index: 2;
-  width: 50px !important;
+  line-height: 35px;
+  width: 42px !important;
   color: black;
-  bottom: 9px;
+  bottom: 5px;
+  background: #FDF2F2;
+  border: 1px solid #EA4335 !important;
+  border-radius: 10px !important;
+}
+
+.cs-message__custom-content{
+  max-height: 300px;
+  overflow: auto;
+}
+
+.react-dropdown-select-input {
+  display: none;
 }
