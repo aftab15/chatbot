@@ -62,7 +62,7 @@
 
 .cs-button.cs-button--attachment{
   visibility: hidden !important;
-  margin-right: 15px !important;
+  margin-right: -30px !important;
 }
 
 .cs-button--send{
@@ -114,44 +114,47 @@
 
 .chat-dropdown{
   position: absolute !important;
-  z-index: 2;
+  z-index: 10;
   line-height: 35px;
-  width: 50px !important;
+  width: 150px !important;
   color: black;
-  bottom: 5px;
+  top: 12px;
   background: #FDF2F2;
   border: 1px solid #EA4335 !important;
-  left: 5px;
+  right: 5px;
   border-radius: 10px !important;
 }
 
 .cs-message__custom-content{
   max-height: 300px;
   overflow: auto;
+  width: max-content;
 }
 
 .react-dropdown-select-input {
   display: none;
 }
  .react-dropdown-select-dropdown{
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  top: 57px !important;
+  border-radius: 10px !important;
+  left: -20px !important;
  }
 
 .css-z2hyoe-ItemComponent.react-dropdown-select-item-selected {
   background-color: #eb614b !important;
 }
 
-.react-dropdown-select[aria-expanded="true"] .react-dropdown-select-dropdown-handle{
-  transform: rotate(180deg) !important;
-}
-
-.react-dropdown-select[aria-expanded="false"] .react-dropdown-select-dropdown-handle{
-  transform: rotate(0deg) !important;
-}
 .cs-message__content-wrapper, .cs-message__content{
   overflow: auto;
 }
-.cs-message__custom-content{
-  width: max-content;
+.cs-message--outgoing .cs-message__custom-content{
+  width: auto;
+}
+
+.cs-conversation-header__content{
+  max-width: 80%;
+}
+.cs-conversation-header__info{
+  white-space: pre-wrap !important;
+  overflow: hidden !important;
 }
