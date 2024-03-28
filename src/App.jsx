@@ -154,9 +154,9 @@ function App() {
               userName="Smarte AI"
               info={helpText}
             />
-            <ConversationHeader.Actions>
+            {/* <ConversationHeader.Actions>
               <InfoButton className=" text-[#eb614b]" />
-            </ConversationHeader.Actions>
+            </ConversationHeader.Actions> */}
           </ConversationHeader>
           <ChatContainer className="pt-16">
             <MessageList

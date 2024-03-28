@@ -71,7 +71,7 @@
 
 .cs-message__content{
   background-color: #EFB6AC   !important;
-  box-shadow: 2px 4px 6px -3px black !important;
+  box-shadow: 2px 4px 6px -5px black !important;
   font-weight: 500;
   border-radius: 0 0.7em 0.7em 0.7em !important;
 
@@ -80,7 +80,7 @@
 .cs-message--outgoing .cs-message__content{
   background-color: #eb614b !important;
   font-weight: 500;
-  box-shadow: -2px 4px 6px -3px black !important;
+  box-shadow: -2px 4px 6px -5px black !important;
   border-radius: .7em 0 0.7em 0.7em !important;
 }
 
