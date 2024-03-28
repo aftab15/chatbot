@@ -149,3 +149,9 @@
 .react-dropdown-select[aria-expanded="false"] .react-dropdown-select-dropdown-handle{
   transform: rotate(0deg) !important;
 }
+.cs-message__content-wrapper, .cs-message__content{
+  overflow: auto;
+}
+.cs-message__custom-content{
+  width: max-content;
+}

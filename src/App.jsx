@@ -128,7 +128,7 @@ function App() {
 
   return (
     <div className="App">
-      <div style={{ position: "relative", height: "90vh", width: "700px" }}>
+      <div className=" relative h-[90vh] w-[1024px]">
         <MainContainer className="flex flex-col">
           <ConversationHeader className=" absolute w-full !z-10">
             <Avatar src={Logo} name="Smarte AI" />
@@ -137,7 +137,7 @@ function App() {
               info="We typically reply in a few minutes"
             />
             <ConversationHeader.Actions>
-              <InfoButton />
+              <InfoButton className=" text-[#eb614b]"/>
             </ConversationHeader.Actions>
           </ConversationHeader>
           <ChatContainer className="pt-16">
