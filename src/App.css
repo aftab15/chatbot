@@ -127,7 +127,6 @@
 
 .cs-message__custom-content{
   max-height: 300px;
-  overflow: auto;
   width: max-content;
 }
 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import "./App.css";
 import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import {
@@ -17,7 +17,7 @@ import Logo from "./assets/roundSmarte.svg";
 import MessageCustomContent from "./MessageCustomContent";
 import constants from "./constants/constants";
 import Select from "react-dropdown-select";
-import { useEffect } from "react";
+// import DummyData from './dummy.json';
 
 function App() {
   const [messages, setMessages] = useState([
@@ -53,6 +53,11 @@ function App() {
       label: "Buying group 2",
       value: "http://10.0.5.6:5000/api/buying_group_a1",
     },
+    // {
+    //   id: 4,
+    //   label: "Testing",
+    //   value: "https://dummyjson.com/products/",
+    // },
   ];
 
   var helpText;
@@ -101,6 +106,8 @@ function App() {
       break;
   }
 
+  // var testingData = DummyData.contacts;
+
   useEffect(() => {
     let inputField = document.getElementsByClassName(
       "cs-message-input__content-editor"
@@ -118,9 +125,10 @@ function App() {
 
   const handleSend = async (message) => {
     console.log(message);
-    let inputValue = message.trim();
+    message = message.replace(/&nbsp;|^\s+|\s+$/g, '').replace(/\s+/g, ' ') || null;
+    console.log("first ",message.replace(/&nbsp;|^\s+|\s+$/g, '').replace(/\s+/g, ' '))
     const newMessage = {
-      inputValue,
+      message,
       direction: "outgoing",
       sentTime: "just now",
     };
@@ -128,7 +136,7 @@ function App() {
     const newMessages = [...messages, newMessage];
     setMessages(newMessages);
     setIsTyping(true);
-    await processMessageToAPI(newMessages, inputValue);
+    await processMessageToAPI(newMessages, message);
   };
 
   async function processMessageToAPI(chatMessages, currentMessage) {
@@ -151,8 +159,8 @@ function App() {
       body: reqBody,
     })
       .then((res) => {
-        if (res.status == 200) {
-          console.log(res)
+        if (res.status == 200 || res.status == 201) {
+          console.log(res);
           return res.json();
         } else {
           throw new Error("Failed to fetch data. Response code: " + res.status);
@@ -160,7 +168,9 @@ function App() {
       })
       .then((json) => {
         console.log(json);
-        if(json?.buying_group == null || json?.contacts == null){
+        if(json?.buying_group == null && json?.contacts == null 
+          // && DummyData?.contacts == null
+          ){
           throw new Error("Failed to fetch data. Response code: " + res.status);
         }
         setMessages([

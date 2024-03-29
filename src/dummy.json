@@ -1,0 +1,125 @@
+{
+  "contacts": [
+    {
+      "Company_Name": "Accenture",
+      "Contact_Linkedin_Url": "https://www.linkedin.com/in/winnie-unnikrishnan",
+      "Contact_Location": "Hyderabad, Telangana, India",
+      "Full_Name": "Winnie Unnikrishnan",
+      "Function": "Other",
+      "GUID": "7A5DAEDCAAF78EC443605ECB9BADEC09",
+      "Job_Started_On": "Dec-2016",
+      "Job_Title": "Senior Manager",
+      "Level": "Manager",
+      "Profile_Picture": "https://static.licdn.com/aero-v1/sc/h/244xhbkr7g40x6bsu4gi6q4ry"
+    },
+    {
+      "Company_Name": "Accenture",
+      "Contact_Linkedin_Url": "https://www.linkedin.com/in/vaishnavi-gudi-2b1693231",
+      "Contact_Location": null,
+      "Full_Name": "Vaishnavi Gudi",
+      "Function": "Engineering and Development",
+      "GUID": "BE91258781434A9980BE3A30F69356B7",
+      "Job_Started_On": "Oct-2022",
+      "Job_Title": "Python Developer",
+      "Level": "Below Manager",
+      "Profile_Picture": "https://static.licdn.com/aero-v1/sc/h/244xhbkr7g40x6bsu4gi6q4ry"
+    },
+    {
+      "Company_Name": "Accenture",
+      "Contact_Linkedin_Url": "https://www.linkedin.com/in/artistkaur",
+      "Contact_Location": "gurugram",
+      "Full_Name": "Amandeep Kaur",
+      "Function": "Communications/Public Relations",
+      "GUID": "991652B9C230155E54988716B18BCC14",
+      "Job_Started_On": "Aug-2019",
+      "Job_Title": "Senior Media Analyst",
+      "Level": "Below Manager",
+      "Profile_Picture": "https://static.licdn.com/aero-v1/sc/h/244xhbkr7g40x6bsu4gi6q4ry"
+    },
+    {
+      "Company_Name": "Accenture",
+      "Contact_Linkedin_Url": "https://www.linkedin.com/in/rajeev-mishra-55b10115",
+      "Contact_Location": null,
+      "Full_Name": "Rajeev Mishra",
+      "Function": "Miscellaneous",
+      "GUID": "2473EA83130215F2B1E86DC23F29283E",
+      "Job_Started_On": "Mar-2011",
+      "Job_Title": "Associate Manager",
+      "Level": "Manager",
+      "Profile_Picture": "https://media.licdn.com/dms/image/D4D03AQFaC6aMKWIkoQ/profile-displayphoto-shrink_200_200/0/1680796488391?e=2147483647&v=beta&t=JY5pGWoZoAnYXCsbt3N89R8RoEVQrFgwE2-rMrqSPGc"
+    },
+    {
+      "Company_Name": "Accenture",
+      "Contact_Linkedin_Url": "https://www.linkedin.com/in/raman-walia-8695a355",
+      "Contact_Location": "Gurugram, Haryana, India",
+      "Full_Name": "Raman Walia",
+      "Function": "Other",
+      "GUID": "C035FA4B181BCE2BE8702DF055EB7631",
+      "Job_Started_On": "Jan-2020",
+      "Job_Title": "Assistant Manager",
+      "Level": "Manager",
+      "Profile_Picture": "https://media.licdn.com/dms/image/C5103AQHwr2QkNXFR1w/profile-displayphoto-shrink_800_800/0/1516863626616?e=2147483647&v=beta&t=AzuKj0xFV2LfHQxQDiT3EQJvEG58gvC2ZrQ95Xh242U"
+    },
+    {
+      "Company_Name": "Accenture",
+      "Contact_Linkedin_Url": "https://www.linkedin.com/in/anshupratik",
+      "Contact_Location": null,
+      "Full_Name": "Anshu Pratik",
+      "Function": "Miscellaneous",
+      "GUID": "9F8CBC7BC3E47B583A5D7D68FEFA8DB3",
+      "Job_Started_On": "Oct-2023",
+      "Job_Title": "Strategy Manager",
+      "Level": "Manager",
+      "Profile_Picture": "https://static.licdn.com/aero-v1/sc/h/9c8pery4andzj6ohjkjp54ma2"
+    },
+    {
+      "Company_Name": "Accenture",
+      "Contact_Linkedin_Url": "https://www.linkedin.com/in/joylin-dsouza-967436154",
+      "Contact_Location": "Bangalore",
+      "Full_Name": "Joylin Dsouza",
+      "Function": "Other",
+      "GUID": "0AD803EE11F6E9F522D83118AE27891B",
+      "Job_Started_On": "Dec-2017",
+      "Job_Title": "Process Analyst",
+      "Level": "Below Manager",
+      "Profile_Picture": "https://media.licdn.com/dms/image/C5603AQGJsuOM6Bdrag/profile-displayphoto-shrink_800_800/0/1517048642616?e=2147483647&v=beta&t=CJ3o38crMjmCRFTw87aw9Ietd0wiytlc_arVnr3W298"
+    },
+    {
+      "Company_Name": "Accenture",
+      "Contact_Linkedin_Url": "https://www.linkedin.com/in/wafa-asghar-92907b148",
+      "Contact_Location": null,
+      "Full_Name": "Wafa Asghar",
+      "Function": "Miscellaneous",
+      "GUID": "F0F455D2F579F95D7913CD5AC0C5F5F9",
+      "Job_Started_On": "Oct-2022",
+      "Job_Title": "Infra Transformation Associate",
+      "Level": "Below Manager",
+      "Profile_Picture": "https://media.licdn.com/dms/image/D4D03AQFIcDc4CTYXPQ/profile-displayphoto-shrink_800_800/0/1681221634736?e=2147483647&v=beta&t=Ag9RCLM930TZURjKIBosntaf-KIjFTM044HjAWBr9B8"
+    },
+    {
+      "Company_Name": "Accenture",
+      "Contact_Linkedin_Url": "https://www.linkedin.com/in/sangamitra-jayakumar-376b7637",
+      "Contact_Location": null,
+      "Full_Name": "Sangamitra Jayakumar",
+      "Function": "Operations and related",
+      "GUID": "0EFFCA9BEBEE1AE43B14CD8516F3F48B",
+      "Job_Started_On": null,
+      "Job_Title": "Transition Manager",
+      "Level": "Manager",
+      "Profile_Picture": "https://media.licdn.com/dms/image/C5103AQGfS0AvJHvbTQ/profile-displayphoto-shrink_800_800/0/1542561443414?e=2147483647&v=beta&t=YA8Vi-Jot3tmWsZaJjYq7J3BKsSiEuxG2LzRytc01NQ"
+    },
+    {
+      "Company_Name": "Accenture",
+      "Contact_Linkedin_Url": "https://www.linkedin.com/in/alwin-mathew-a2218118a",
+      "Contact_Location": "Chennai, Tamil Nadu, India",
+      "Full_Name": "Alwin mathew",
+      "Function": "Finance/Banking/Insurance",
+      "GUID": "6E5EA552487ECB752B78A785F6438368",
+      "Job_Started_On": "Mar-2023",
+      "Job_Title": "Finance Analyst",
+      "Level": "Below Manager",
+      "Profile_Picture": "https://media.licdn.com/dms/image/C4D03AQH-uFZA855Jdw/profile-displayphoto-shrink_800_800/0/1561671757322?e=2147483647&v=beta&t=Ej1sqZDGmcLp_AhJ-mUQTPLbYTM80SnClTE_dkOxJDc"
+    }
+  ],
+  "message": "Certainly, these are the contacts found, try modifying the prompt if needed"
+}
